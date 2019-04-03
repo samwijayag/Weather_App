@@ -6,6 +6,24 @@
 </head>
 <body>
 
-	<script type="text/javascript" scr="script.js"></script>
+	<div id="searchContainer">
+		<input class="searchControl" id="searchInput" type="text" placeholder="City Name or Zipcode">
+		<button id="searchBtn" class="searchControl">Search</button>
+	</div>
+	<div id="weatherContainer">
+		<div id="weatherDescription">
+			<h1 id="cityHeader"></h1>
+			<div id="weatherMain">
+				<div id="temprature"></div>
+				<div id="weatherDescriptionHeader"></div>
+				<div><img id="documentIconImg" src=""></div>		
+			</div>
+			<hr>
+			<div id="windSpeed" class="bottomDetails"></div>
+			<div id="humidity" class="bottomDetails"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
