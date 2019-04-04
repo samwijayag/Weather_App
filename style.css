@@ -1,0 +1,30 @@
+
+
+html, body {
+    height: 100%;
+}
+
+body{
+	background-image: url('./Images/default.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	color: #fff;
+	text-shadow: 2px 1px 1px #000000;
+	font-family: "paletino Linotype", "Book Antiqua", serif;
+}
+
+#weatherContainer{
+	background-color: rgba(0,0,0,0.25);
+	box-shadow: 1px 1px 5px black;
+	padding: 50px;
+	border-radius: 10px;
+	position: absolute;
+	
+}
+
+#weatherContaienr h1{
+	margin: 7px;
+	font-size: 45px;
+	font-family: sans-serif;
+}
