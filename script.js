@@ -48,6 +48,23 @@ const init = (resultFromApiCall) =>{
 		default:
 			break;
 	}
+	let weatherDescriptionHeader = document.getElementById('weatherDescriptionHeader')
+	let temperatureElement = document.getElementById('temperature')
+	let humidityElement = document.getElementById('humidity')
+	let windSpeedElement = document.getElementById('windSpeed')
+	let cityHeader = document.getElementById('cityHeader')
+	let weatherIcon = document.getElementById('documentIconImg')
+
+	weatherIcon.src = 'http://openweathermap.org/img/w/' + resultFromApiCall.weather[0].icon + '.png'
+
+	let resultDescription = resultFromApiCall.weather[0].description
+	weatherDescriptionHeader.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1)
+
+	temperatureElement.innerHTML = Math.floor(resultFromApiCall.main.temp) + '&#176'
+	windSpeedElement.innerHTML = 'Winds at ' + Math.floor(resultFromApiCall.wind.speed) + 'm/s'
+	cityHeader.innerHTML = resultFromApiCall.name
+	humidityElement.innerHTML = 'Humidity levels at ' + resultFromApiCall.main.humidity + '%'
+
 }
 
 document.getElementById('searchBtn').addEventListener("click", () =>{
