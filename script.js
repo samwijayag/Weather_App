@@ -22,6 +22,9 @@ const searchWeather = (searchTerm) => {
 	})
 }
 
+
+
+
 const init = (resultFromApiCall) =>{
 	switch(resultFromApiCall.weather[0].main){
 		case 'Clear':
@@ -65,7 +68,19 @@ const init = (resultFromApiCall) =>{
 	cityHeader.innerHTML = resultFromApiCall.name
 	humidityElement.innerHTML = 'Humidity levels at ' + resultFromApiCall.main.humidity + '%'
 
+	setPositionOfWeatherContainer()
+
 }
+
+	const setPositionOfWeatherContainer = () =>{
+		let weatherContainer = document.getElementById('weatherContainer')
+		let weatherContainerHeight = weatherContainer.clientHeight
+		let weatherContainerWidth = weatherContainer.clientWidth
+
+		weatherContainer.style.left = `calc(50% - ${weatherContainerWidth/2}px)`
+		weatherContainer.style.top = `calc(50% - ${weatherContainerHeight/1.3}px)`
+		weatherContainer.style.visibility = 'visible'
+	}
 
 document.getElementById('searchBtn').addEventListener("click", () =>{
 	let searchTerm = document.getElementById('searchInput').value;
