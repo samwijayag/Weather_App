@@ -15,11 +15,12 @@ body{
 }
 
 #weatherContainer{
-	background-color: rgba(0,0,0,0.25);
-	box-shadow: 1px 1px 5px black;
-	padding: 50px;
-	border-radius: 10px;
-	position: absolute;
+	margin-top: 86px;
+    background-color: rgba(23, 17, 17, 0.72);
+    box-shadow: inset -1px 1px 5px black;
+    padding: 55px;
+    border-radius: 8px;
+    position: absolute;
 	visibility: hidden;
 }
 
@@ -30,14 +31,14 @@ body{
 }
 
 #searchContainer{
-	padding: 15px;
+	padding: 50px;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 
 #searchContainer input{
-	width: 200px;
+	width: 400px;
 }
 
 #searchContainer button{
